@@ -58,8 +58,8 @@ section{padding:80px 0;border-bottom:0.5px solid var(--border)}
 .book-btn{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:1px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
 .book-btn:hover{color:var(--rose-dark);border-color:var(--rose-dark)}
 
-.book-reader{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.95);z-index:500;align-items:center;justify-content:center;flex-direction:column;padding:20px}
-.book-reader.open{display:flex}
+.book-reader{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.95);z-index:500;align-items:center;justify-content:center;flex-direction:column;padding:20px;pointer-events:none}
+.book-reader.open{display:flex;pointer-events:all}
 .reader-inner{position:relative;width:min(600px,90vw);display:flex;flex-direction:column;align-items:center}
 .reader-img{width:100%;max-height:78vh;object-fit:contain;display:block;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
 .reader-controls{display:flex;align-items:center;gap:20px;margin-top:16px}
@@ -77,8 +77,8 @@ section{padding:80px 0;border-bottom:0.5px solid var(--border)}
 .gal-item:hover .gal-overlay{opacity:1}
 .gal-overlay{position:absolute;inset:0;background:rgba(200,50,86,0.78);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:12px;opacity:0;transition:opacity .2s}
 .gal-title{font-size:11px;letter-spacing:0.05em;color:#fff;line-height:1.4;word-break:break-word}.gal-medium{font-size:10px;color:rgba(255,255,255,0.65);letter-spacing:0.04em;margin-top:4px;font-style:italic}
-.lightbox{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.93);z-index:1000;align-items:center;justify-content:center;padding:24px}
-.lightbox.open{display:flex}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.93);z-index:1000;align-items:center;justify-content:center;padding:24px;pointer-events:none}
+.lightbox.open{display:flex;pointer-events:all}
 .lb-inner{position:relative;max-width:88vw;max-height:90vh;display:flex;flex-direction:column;align-items:center}
 .lb-inner img{max-width:100%;max-height:82vh;object-fit:contain;display:block;border-radius:4px}
 .lb-title{color:rgba(250,206,231,0.85);font-size:12px;letter-spacing:0.07em;margin-top:10px;text-align:center}
@@ -241,7 +241,7 @@ footer{padding:28px 0;display:flex;justify-content:space-between;align-items:cen
       <div class="sec-label">Contact</div>
       <div class="contact-heading">Let's get<br>in <em>touch</em></div>
       <p class="contact-p">Whether it's a project, a conversation, or just a hello, I'd love to hear from you.</p>
-      <div class="contact-link-row"><div class="ci-label">Email</div><div class="ci-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0b3b4a5b0a8a1aea9a5b9a1aea7f1f0f1f580a7ada1a9aceea3afad">[email&#160;protected]</a></div></div>
+      <div class="contact-link-row"><div class="ci-label">Email</div><div class="ci-val">stephanieyang1015@gmail.com</div></div>
       <div class="contact-link-row"><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/stephanie-yang04</div></div>
     </div>
   </section>
