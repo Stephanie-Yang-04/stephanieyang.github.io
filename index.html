@@ -50,7 +50,7 @@ section{padding:80px 0;border-bottom:0.5px solid var(--border)}
 
 .research-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:8px}
 .book-card{background:#fff;border:0.5px solid var(--border);border-radius:8px;overflow:hidden}
-.book-cover{width:100%;aspect-ratio:4/3;overflow:hidden;position:relative;background:#1a2744}
+.book-cover{width:100%;aspect-ratio:1;overflow:hidden;position:relative;background:#1a2744}
 .book-cover img{width:100%;height:100%;object-fit:cover;display:block}
 .book-info{padding:18px 20px}
 .book-title{font-family:Georgia,serif;font-size:17px;font-weight:400;color:var(--text);margin-bottom:6px}
@@ -58,8 +58,8 @@ section{padding:80px 0;border-bottom:0.5px solid var(--border)}
 .book-btn{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:1px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
 .book-btn:hover{color:var(--rose-dark);border-color:var(--rose-dark)}
 
-.book-reader{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.95);z-index:500;align-items:center;justify-content:center;flex-direction:column;padding:20px;pointer-events:none}
-.book-reader.open{display:flex;pointer-events:all}
+.book-reader{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.95);z-index:500;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+.book-reader.open{display:flex}
 .reader-inner{position:relative;width:min(600px,90vw);display:flex;flex-direction:column;align-items:center}
 .reader-img{width:100%;max-height:78vh;object-fit:contain;display:block;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
 .reader-controls{display:flex;align-items:center;gap:20px;margin-top:16px}
@@ -76,9 +76,9 @@ section{padding:80px 0;border-bottom:0.5px solid var(--border)}
 .gal-item:hover img{transform:scale(1.05)}
 .gal-item:hover .gal-overlay{opacity:1}
 .gal-overlay{position:absolute;inset:0;background:rgba(200,50,86,0.78);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:12px;opacity:0;transition:opacity .2s}
-.gal-title{font-size:11px;letter-spacing:0.05em;color:#fff;line-height:1.4;word-break:break-word}.gal-medium{font-size:10px;color:rgba(255,255,255,0.65);letter-spacing:0.04em;margin-top:4px;font-style:italic}
-.lightbox{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.93);z-index:1000;align-items:center;justify-content:center;padding:24px;pointer-events:none}
-.lightbox.open{display:flex;pointer-events:all}
+.gal-title{font-size:11px;letter-spacing:0.05em;color:#fff;line-height:1.4;word-break:break-word}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.93);z-index:1000;align-items:center;justify-content:center;padding:24px}
+.lightbox.open{display:flex}
 .lb-inner{position:relative;max-width:88vw;max-height:90vh;display:flex;flex-direction:column;align-items:center}
 .lb-inner img{max-width:100%;max-height:82vh;object-fit:contain;display:block;border-radius:4px}
 .lb-title{color:rgba(250,206,231,0.85);font-size:12px;letter-spacing:0.07em;margin-top:10px;text-align:center}
@@ -199,39 +199,39 @@ footer{padding:28px 0;display:flex;justify-content:space-between;align-items:cen
     <div class="gallery-grid">
       <div class="gal-item" onclick="openLightbox('commute')">
         <img src="images/commute.jpg" alt="commute">
-        <div class="gal-overlay"><div class="gal-title">commute</div><div class="gal-medium">Procreate</div></div>
+        <div class="gal-overlay"><div class="gal-title">commute</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Procreate</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('gn')">
         <img src="images/gn.jpg" alt="gn">
-        <div class="gal-overlay"><div class="gal-title">gn</div><div class="gal-medium">Gouache on paper</div></div>
+        <div class="gal-overlay"><div class="gal-title">gn</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Gouache on paper</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('known')">
         <img src="images/known.jpeg" alt="known">
-        <div class="gal-overlay"><div class="gal-title">known</div><div class="gal-medium">Gouache on paper</div></div>
+        <div class="gal-overlay"><div class="gal-title">known</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Gouache on paper</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('lingering')">
         <img src="images/lingering.jpeg" alt="lingering">
-        <div class="gal-overlay"><div class="gal-title">lingering</div><div class="gal-medium">Gouache on paper</div></div>
+        <div class="gal-overlay"><div class="gal-title">lingering</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Gouache on paper</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('recipe_for_the_best_banana_bread')">
         <img src="images/recipe_for_the_best_banana_bread.jpg" alt="recipe_for_the_best_banana_bread">
-        <div class="gal-overlay"><div class="gal-title">recipe_for_the_best_banana_bread</div><div class="gal-medium">Procreate</div></div>
+        <div class="gal-overlay"><div class="gal-title">recipe_for_the_best_banana_bread</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Procreate</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('sleep_paralysis_demon')">
         <img src="images/sleep_paralysis_demon.jpg" alt="sleep_paralysis_demon">
-        <div class="gal-overlay"><div class="gal-title">sleep_paralysis_demon</div><div class="gal-medium">Procreate</div></div>
+        <div class="gal-overlay"><div class="gal-title">sleep_paralysis_demon</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Procreate</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('spring')">
         <img src="images/spring.jpg" alt="spring">
-        <div class="gal-overlay"><div class="gal-title">spring</div><div class="gal-medium">Procreate</div></div>
+        <div class="gal-overlay"><div class="gal-title">spring</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Procreate</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('yum_colors')">
         <img src="images/yum_colors.jpg" alt="yum_colors">
-        <div class="gal-overlay"><div class="gal-title">yum_colors</div><div class="gal-medium">Procreate</div></div>
+        <div class="gal-overlay"><div class="gal-title">yum_colors</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Procreate</div></div>
       </div>
       <div class="gal-item" onclick="openLightbox('WVHS_Mural')">
         <img src="images/WVHS_Mural.jpg" alt="WVHS_Mural">
-        <div class="gal-overlay"><div class="gal-title">WVHS_Mural</div><div class="gal-medium">Acrylic paint on plywood</div></div>
+        <div class="gal-overlay"><div class="gal-title">WVHS_Mural</div><div style="font-size:10px;color:rgba(255,255,255,0.65);font-style:italic;margin-top:3px">Acrylic paint on plywood</div></div>
       </div>
     </div>
   </section>
@@ -241,7 +241,7 @@ footer{padding:28px 0;display:flex;justify-content:space-between;align-items:cen
       <div class="sec-label">Contact</div>
       <div class="contact-heading">Let's get<br>in <em>touch</em></div>
       <p class="contact-p">Whether it's a project, a conversation, or just a hello, I'd love to hear from you.</p>
-      <div class="contact-link-row"><div class="ci-label">Email</div><div class="ci-val">stephanieyang1015@gmail.com</div></div>
+      <div class="contact-link-row"><div class="ci-label">Email</div><div class="ci-val">stephanieyang1015&#64;gmail&#46;com</div></div>
       <div class="contact-link-row"><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/stephanie-yang04</div></div>
     </div>
   </section>
@@ -276,7 +276,7 @@ footer{padding:28px 0;display:flex;justify-content:space-between;align-items:cen
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 var mirrorPages = ["images/The_Mirror_Test/The_Mirror_Test_1.png", "images/The_Mirror_Test/The_Mirror_Test_2.png", "images/The_Mirror_Test/The_Mirror_Test_3.png", "images/The_Mirror_Test/The_Mirror_Test_4.png", "images/The_Mirror_Test/The_Mirror_Test_5.png", "images/The_Mirror_Test/The_Mirror_Test_6.png", "images/The_Mirror_Test/The_Mirror_Test_7.png", "images/The_Mirror_Test/The_Mirror_Test_8.png", "images/The_Mirror_Test/The_Mirror_Test_9.png", "images/The_Mirror_Test/The_Mirror_Test_10.png"];
 var customersPages = ["images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_1.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_2.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_3.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_4.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_5.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_6.png"];
 var currentBook = [];
@@ -376,4 +376,12 @@ function updateActiveTab() {
     var el = document.getElementById(id);
     if(el && el.offsetTop <= y) active = id;
   });
-  document.querySelectorAll(
+  document.querySelectorAll('.nav-links li').forEach(function(li) {
+    li.classList.toggle('active', li.getAttribute('data-target') === active);
+  });
+}
+window.addEventListener('scroll', updateActiveTab, {passive:true});
+updateActiveTab();
+</script>
+</body>
+</html>
