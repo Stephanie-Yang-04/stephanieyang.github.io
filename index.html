@@ -48,27 +48,37 @@ section{padding:80px 0;border-bottom:0.5px solid var(--border)}
 .exp-img{height:110px;width:auto;border-radius:4px;border:1.5px solid var(--blush);cursor:pointer;transition:transform .2s,border-color .2s;object-fit:cover}
 .exp-img:hover{transform:scale(1.04);border-color:var(--rose)}
 
-.research-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:8px}
-.book-card{background:#fff;border:0.5px solid var(--border);border-radius:8px;overflow:hidden}
+
+.report-section{margin-bottom:48px}
+.report-title{font-family:Georgia,serif;font-size:19px;font-weight:400;color:var(--text);margin-bottom:6px}
+.report-desc{font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:16px;max-width:600px}
+.report-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.report-scroll::-webkit-scrollbar{height:4px}
+.report-scroll::-webkit-scrollbar-track{background:var(--blush-bg)}
+.report-scroll::-webkit-scrollbar-thumb{background:var(--rose);border-radius:2px}
+.report-page{flex:0 0 auto;width:min(420px,80vw);scroll-snap-align:start;border-radius:4px;overflow:hidden;border:0.5px solid var(--border)}
+.report-page img{width:100%;display:block}
+
+
 .book-cover{width:100%;aspect-ratio:1;overflow:hidden;position:relative;background:#1a2744}
-.book-cover img{width:100%;height:100%;object-fit:cover;display:block}
-.book-info{padding:18px 20px}
-.book-title{font-family:Georgia,serif;font-size:17px;font-weight:400;color:var(--text);margin-bottom:6px}
-.book-desc{font-size:12px;color:var(--text-muted);line-height:1.7;margin-bottom:14px}
-.book-btn{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:1px;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
-.book-btn:hover{color:var(--rose-dark);border-color:var(--rose-dark)}
+
+
+
+
+
+
 
 .book-reader{display:none;position:fixed;inset:0;background:rgba(20,8,14,0.95);z-index:500;align-items:center;justify-content:center;flex-direction:column;padding:20px}
 .book-reader.open{display:flex}
-.reader-inner{position:relative;width:min(600px,90vw);display:flex;flex-direction:column;align-items:center}
-.reader-img{width:auto;max-width:70vw;max-height:78vh;object-fit:contain;display:block;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
-.reader-controls{display:flex;align-items:center;gap:20px;margin-top:16px}
-.reader-btn{width:40px;height:40px;border-radius:50%;background:rgba(250,206,231,0.15);border:1px solid rgba(250,206,231,0.3);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
-.reader-btn:hover{background:var(--rose)}
-.reader-btn:disabled{opacity:0.25;cursor:default}
-.reader-counter{font-size:13px;color:rgba(250,206,231,0.7);letter-spacing:0.06em;min-width:60px;text-align:center}
-.reader-title{font-size:12px;color:rgba(250,206,231,0.5);letter-spacing:0.08em;text-transform:uppercase;margin-top:10px}
-.reader-close{position:absolute;top:-14px;right:-14px;width:32px;height:32px;background:var(--rose);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:14px;border:none;font-weight:600}
+
+.reader-img{width:100%;max-height:78vh;object-fit:contain;display:block;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+
+
+
+
+
+
+
 
 .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
 .gal-item{aspect-ratio:1;cursor:pointer;overflow:hidden;position:relative;background:var(--blush-bg)}
@@ -173,22 +183,32 @@ footer{padding:28px 0;display:flex;justify-content:space-between;align-items:cen
   <section id="research">
     <div class="sec-label">Research</div>
     <p style="font-size:15px;color:var(--text-muted);line-height:1.85;max-width:580px;margin-bottom:32px">Data-driven research projects from my marketing analytics coursework. Click "Read" to flip through each one.</p>
-    <div class="research-grid">
-      <div class="book-card">
-        <div class="book-cover"><img src="images/The_Mirror_Test/The_Mirror_Test_1.png" alt="The Mirror Test"></div>
-        <div class="book-info">
-          <div class="book-title">The Mirror Test</div>
-          <div class="book-desc">728 UO students rated five political leaders on 13 character traits. What the data revealed was not only about the leaders, but about the students doing the rating.</div>
-          <button class="book-btn" onclick="openBook('mirror')">Read &nbsp;&#8594;</button>
-        </div>
+    <div class="report-section">
+      <div class="report-title">The Mirror Test</div>
+      <div class="report-desc">728 UO students rated five political leaders on 13 character traits. What the data revealed was not only about the leaders, but about the students doing the rating.</div>
+      <div class="report-scroll">
+        <div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_1.png" alt="The Mirror Test page 1" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_2.png" alt="The Mirror Test page 2" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_3.png" alt="The Mirror Test page 3" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_4.png" alt="The Mirror Test page 4" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_5.png" alt="The Mirror Test page 5" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_6.png" alt="The Mirror Test page 6" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_7.png" alt="The Mirror Test page 7" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_8.png" alt="The Mirror Test page 8" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_9.png" alt="The Mirror Test page 9" loading="lazy"></div>
+<div class="report-page"><img src="images/The_Mirror_Test/The_Mirror_Test_10.png" alt="The Mirror Test page 10" loading="lazy"></div>
       </div>
-      <div class="book-card">
-        <div class="book-cover"><img src="images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_1.png" alt="Who Becomes Our Customers"></div>
-        <div class="book-info">
-          <div class="book-title">Who Becomes Our Customers?</div>
-          <div class="book-desc">Using regression to identify which demographic factors best predict customer status, and what that means for where we spend our marketing budget.</div>
-          <button class="book-btn" onclick="openBook('customers')">Read &nbsp;&#8594;</button>
-        </div>
+    </div>
+    <div class="report-section">
+      <div class="report-title">Who Becomes Our Customers?</div>
+      <div class="report-desc">Using regression to identify which demographic factors best predict customer status, and what that means for where we spend our marketing budget.</div>
+      <div class="report-scroll">
+        <div class="report-page"><img src="images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_1.png" alt="Who Becomes Our Customers page 1" loading="lazy"></div>
+<div class="report-page"><img src="images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_2.png" alt="Who Becomes Our Customers page 2" loading="lazy"></div>
+<div class="report-page"><img src="images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_3.png" alt="Who Becomes Our Customers page 3" loading="lazy"></div>
+<div class="report-page"><img src="images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_4.png" alt="Who Becomes Our Customers page 4" loading="lazy"></div>
+<div class="report-page"><img src="images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_5.png" alt="Who Becomes Our Customers page 5" loading="lazy"></div>
+<div class="report-page"><img src="images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_6.png" alt="Who Becomes Our Customers page 6" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -253,19 +273,6 @@ footer{padding:28px 0;display:flex;justify-content:space-between;align-items:cen
 
 </div>
 
-<div class="book-reader" id="book-reader" onclick="closeBookOutside(event)">
-  <div class="reader-inner" id="reader-inner">
-    <button class="reader-close" onclick="closeBook()">x</button>
-    <img id="reader-img" src="" alt="">
-    <div class="reader-controls">
-      <button class="reader-btn" id="reader-prev" onclick="readerNav(-1)">&#8592;</button>
-      <div class="reader-counter" id="reader-counter">1 of 10</div>
-      <button class="reader-btn" id="reader-next" onclick="readerNav(1)">&#8594;</button>
-    </div>
-    <div class="reader-title" id="reader-title"></div>
-  </div>
-</div>
-
 <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
   <div class="lb-inner">
     <button class="lb-close" onclick="closeLightbox()">x</button>
@@ -277,37 +284,6 @@ footer{padding:28px 0;display:flex;justify-content:space-between;align-items:cen
 </div>
 
 <script>
-var mirrorPages = ["images/The_Mirror_Test/The_Mirror_Test_1.png", "images/The_Mirror_Test/The_Mirror_Test_2.png", "images/The_Mirror_Test/The_Mirror_Test_3.png", "images/The_Mirror_Test/The_Mirror_Test_4.png", "images/The_Mirror_Test/The_Mirror_Test_5.png", "images/The_Mirror_Test/The_Mirror_Test_6.png", "images/The_Mirror_Test/The_Mirror_Test_7.png", "images/The_Mirror_Test/The_Mirror_Test_8.png", "images/The_Mirror_Test/The_Mirror_Test_9.png", "images/The_Mirror_Test/The_Mirror_Test_10.png"];
-var customersPages = ["images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_1.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_2.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_3.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_4.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_5.png", "images/Who_Becomes_Our_Customers/Who_Becomes_Our_Customers_6.png"];
-var currentBook = [];
-var currentBookTitle = '';
-var currentBookIdx = 0;
-
-function openBook(which) {
-  currentBook = which === 'mirror' ? mirrorPages : customersPages;
-  currentBookTitle = which === 'mirror' ? 'The Mirror Test' : 'Who Becomes Our Customers?';
-  currentBookIdx = 0;
-  renderReader();
-  document.getElementById('book-reader').classList.add('open');
-}
-function renderReader() {
-  document.getElementById('reader-img').src = currentBook[currentBookIdx];
-  document.getElementById('reader-counter').textContent = (currentBookIdx+1) + ' of ' + currentBook.length;
-  document.getElementById('reader-title').textContent = currentBookTitle;
-  document.getElementById('reader-prev').disabled = currentBookIdx === 0;
-  document.getElementById('reader-next').disabled = currentBookIdx === currentBook.length - 1;
-}
-function readerNav(dir) {
-  currentBookIdx = Math.max(0, Math.min(currentBook.length-1, currentBookIdx+dir));
-  renderReader();
-}
-function closeBook() {
-  document.getElementById('book-reader').classList.remove('open');
-}
-function closeBookOutside(e) {
-  if(e.target === document.getElementById('book-reader')) closeBook();
-}
-
 var galleryKeys = ["commute", "gn", "known", "lingering", "recipe_for_the_best_banana_bread", "sleep_paralysis_demon", "spring", "yum_colors", "WVHS_Mural"];
 var allSrcs = {"commute": "images/commute.jpg", "gn": "images/gn.jpg", "known": "images/known.jpeg", "lingering": "images/lingering.jpeg", "recipe_for_the_best_banana_bread": "images/recipe_for_the_best_banana_bread.jpg", "sleep_paralysis_demon": "images/sleep_paralysis_demon.jpg", "spring": "images/spring.jpg", "yum_colors": "images/yum_colors.jpg", "WVHS_Mural": "images/WVHS_Mural.jpg", "Hollywood_Theater_Flyer": "images/Hollywood_Theater_Flyer.png", "Org_Flyer": "images/Org_Flyer.png", "Org_Flyers_2": "images/Org_Flyers_2.png", "Volunteer_Flyer": "images/Volunteer_Flyer.png", "group": "images/OCG_Group_Photo.jpg"};
 var allTitles = {"commute": "commute", "gn": "gn", "known": "known", "lingering": "lingering", "recipe_for_the_best_banana_bread": "recipe_for_the_best_banana_bread", "sleep_paralysis_demon": "sleep_paralysis_demon", "spring": "spring", "yum_colors": "yum_colors", "WVHS_Mural": "WVHS_Mural", "Hollywood_Theater_Flyer": "Hollywood Theater Flyer", "Org_Flyer": "Org Flyer", "Org_Flyers_2": "Org Flyers 2", "Volunteer_Flyer": "Volunteer Flyer", "group": "OCG Group Photo"};
